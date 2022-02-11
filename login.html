@@ -24,6 +24,9 @@
         <label for="password" class="password_txt">Password</label>
         <input type="password" id="password" name="password" class="register_txt">
         <button type='button' class="register_btn" id="register_send">登録完了</button>
+        <button type="'button" class="sininbtn" id="sinin_send">サインイン</button>
+
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -47,6 +50,8 @@
         const database = getDatabase(app);
         const auth = getAuth();
 
+
+        // 登録完了ボタンをクリック
         $('#register_send').on('click', function () {
             const email = $('#email').val();
             const password = $('#password').val();
@@ -80,7 +85,11 @@
                     // ..
                 });
 
+        });
 
+        // サインインボタンをクリック
+        $("#sinin_send").on('click', function () {
+            location.href = 'list2.html'
         });
 
 
